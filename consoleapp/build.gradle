@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'com.dewan.sbasket'
+version '1.0'
+
+apply from: "$rootDir/gradle/repositories.gradle"
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.dewan.sbasket.consoleapp.ConsoleApp'
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+dependencies {
+    implementation project(':domain')
+    implementation project(':service')
+
+    implementation libs.jackson_core
+    implementation libs.jackson_databind
+    implementation libs.jackson_annotations
+
+    testCompile libs.mockito
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
