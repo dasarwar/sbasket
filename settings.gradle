@@ -1,3 +1,4 @@
 rootProject.name = 'sbasket'
 include 'domain'
+include 'service'
 
