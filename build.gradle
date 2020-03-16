@@ -1,0 +1,10 @@
+plugins {
+    id 'java'
+}
+apply from: "$rootDir/gradle/dependencies.gradle"
+apply from: "$rootDir/gradle/repositories.gradle"
+
+group 'com.dewan.sbasket'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8

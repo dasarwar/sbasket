@@ -1,0 +1,21 @@
+def junitVersion = "4.12"
+def commonsLangVersion = "2.6"
+ext.log4jVersion = "2.11.1"
+
+ext {
+
+    libs = [
+            commons_lang: dependencies.create("commons-lang:commons-lang:$commonsLangVersion"),
+            commons_lang3: dependencies.create("org.apache.commons:commons-lang3:3.9"),
+            commons_logging: dependencies.create("commons-logging:commons-logging:1.1.1"),
+            hamcrest_core: dependencies.create("org.hamcrest:hamcrest-core:1.3"),
+            hamcrest_library: dependencies.create("org.hamcrest:hamcrest-library:1.3"),
+            jackson_core: dependencies.create("com.fasterxml.jackson.core:jackson-core:2.9.9"),
+            jackson_databind: dependencies.create("com.fasterxml.jackson.core:jackson-databind:2.9.9.3"),
+            jackson_annotations: dependencies.create("com.fasterxml.jackson.core:jackson-annotations:2.9.9"),
+            junit: dependencies.create("junit:junit:$junitVersion"),
+            junit_dataprovider: dependencies.create("com.tngtech.java:junit-dataprovider:1.10.0"),
+            log4j2: "org.apache.logging.log4j:log4j-1.2-api:$log4jVersion",
+
+            mockito: dependencies.create("org.mockito:mockito-core:1.10.19"),
+    ]}

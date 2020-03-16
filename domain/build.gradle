@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'com.dewan.sbasket'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+apply from: "$rootDir/gradle/repositories.gradle"
+
+dependencies {
+    implementation libs.jackson_core
+    implementation libs.jackson_databind
+    implementation libs.jackson_annotations
+
+    testCompile libs.mockito
+    testCompile libs.hamcrest_core
+    testCompile libs.hamcrest_library
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
